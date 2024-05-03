@@ -415,6 +415,49 @@ for(let i=word1.length -1;i>0;i--){
 }
 console.log(result4);
 
+const names1 = ["Sai", "Khaja"]; // Data from DB
+
+const names2 = names1.slice(); // copy array using slice
+
+
+const input = 'Sai';
+
+const filteredArray = names1.filter(name => {
+    return name.includes(input);
+}) // ["Sai"];
+
+
+// spred operator
+
+const names3 = ["Sai", "Khaja"]; 
+
+
+// copy
+const names4 = [...names3];
+
+// mergde two arrays
+
+const names5 = ["Sai", "Khaja"]; 
+const names6 = ["Krishna"];
+
+const names7 = [...names5, ...name6] // ["Sai", "Khaja", "Krishna" ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
