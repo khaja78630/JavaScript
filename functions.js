@@ -1,3 +1,4 @@
+
 const num1  = 100;
 const num2  = 200;
 
@@ -193,6 +194,56 @@ function b() {
 }
 
 a(b)
+
+
+// var userName  = "Sai";
+// var userEmailId= 'test';
+// var mobNo = 1234;
+
+console.log(this);
+
+const user1 = {
+    userName  : "Sai",
+    userEmailId: "test@google.com",
+    mobNo: "12345",
+    getUserDeatils : function(){
+
+       
+
+        setTimeout(function(){
+            console.log(this.userName);
+            console.log(this.userEmailId);
+            console.log(this.mobNo);
+        }, 1000) // undefined
+
+        setTimeout(() =>{
+            console.log(this.userName);
+            console.log(this.userEmailId);
+            console.log(this.mobNo);
+        }, 1000) // Sai
+    },
+
+    // getUserDeatils : function(){ // prints obj values
+
+       
+
+//    //console.log(this.userName);
+//     console.log(this.userEmailId);
+//     console.log(this.mobNo);
+    
+    // },
+
+    
+}
+user1.getUserDeatils(); // undefined
+
+
+setTimeout(() =>{
+    console.log(this.userName);
+    console.log(this.userEmailId);
+    console.log(this.mobNo);
+}, 1000) // Sai
+
 
 
 
